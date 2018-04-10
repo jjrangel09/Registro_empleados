@@ -1,12 +1,12 @@
 
 public class Empleado extends Persona {
 
-	private String nombres, apellidos, nCuenta;
+	private String nombres, apellidos;
+	int altura;
 	private int edad;
 	private static int acum = 0;
-	private int saldo = 0;
 
-	public Usuario() {
+	public Empleado() {
 		// TODO Auto-generated constructor stub
 
 	}
@@ -50,36 +50,23 @@ public class Empleado extends Persona {
 		this.nombres = nombres;
 	}
 
-	public String getNcuenta() {
-		return nCuenta;
-	}
-
-	public void setNcuenta() {
-		acum++;
-		nCuenta = "2018" + acum;
-
-	}
-
-	/**
-	 * @return the saldo
-	 */
-	public int getSaldo() {
-		return saldo;
-	}
-
-	/**
-	 * @param saldo the saldo to set
-	 */
-	public void setSaldo(int saldo) {
-		this.saldo += saldo;
-	}
 
 	@Override
 	public String toString() {
-		String cadena = "\n*************************************\n"+"NOMBRE: " + nombres + " " + apellidos + "\nEdad: " + edad + "\nNumero de cuenta: " + nCuenta
-				+ "\n\n**Tenga en cuenta que el numero \n" + "de cuenta se pedira a la hora de\n"
-				+ "hacer retirios y consignaciones**"+"\n*************************************\n";
+		String cadena = "\n*************************************\n";
 		return cadena;
+	}
+
+	@Override
+	public int getAltura() {
+		// TODO Auto-generated method stub
+		return altura;
+	}
+
+	@Override
+	public void setAltura(int alt) {
+		// TODO Auto-generated method stub
+		altura = alt;
 	}
 
 }
